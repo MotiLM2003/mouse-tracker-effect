@@ -1,23 +1,41 @@
+.body {
+  cursor: none;
+}
 .nav-links {
   display: flex;
   justify-content: space-between;
-  min-width: 10vh;
+  min-height: 10vh;
   align-items: center;
   margin: auto;
 }
 
 .nav-links li {
   list-style: none;
+  padding: 0.5rem;
 }
 
 .cursor {
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   border: 2px solid #000;
   border-radius: 50%;
   position: absolute;
   top: 0px;
   left: 0px;
   transform: translate(-50%, -50%);
-  cursor: none;
+  cursor: not-allowed;
+  pointer-events: none;
+  transition: 0.2s all linear;
+  transition-property: background, transform;
+  transform-origin: 100% 100%;
+  z-index: -1;
+}
+
+.scale {
+  transform: scale(2);
+  background: #000;
+}
+
+.hoverd-link {
+  color: #fff;
 }
